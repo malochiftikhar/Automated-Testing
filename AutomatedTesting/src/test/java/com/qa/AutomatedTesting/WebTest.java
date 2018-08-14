@@ -27,10 +27,32 @@ public class WebTest {
 	}
 	
 	@Test
-	public void loadMyFacebookProfileTest() {
-		myDriver.get("https://www.google.com");
-		WebElement myElement = myDriver.findElement(By.cssSelector("#tsf > div.tsf-p > div.jsb > center > input[type=\"submit\"]:nth-child(1)"));
-		assertTrue(myElement.isDisplayed());
+	public void addNamePasswordTest() {
+		myDriver.get("http://thedemosite.co.uk/");
+		WebElement element = myDriver.findElement(By.linkText("3. Add a User"));
+		element.click();
+		WebElement element1 = myDriver.findElement(By.name("username"));
+		element1.click();
+		WebElement element2 = myDriver.findElement(By.name("username"));
+		element2.sendKeys("ifti");
+		WebElement element3 = myDriver.findElement(By.name("password"));
+		element3.click();
+		WebElement element4 = myDriver.findElement(By.name("password"));
+		element4.sendKeys("JAVA");
+		WebElement element5 = myDriver.findElement(By.name("FormsButton2"));
+		element5.click();
+		WebElement element6 = myDriver.findElement(By.linkText("4. Login"));
+		element6.click();
+		WebElement element7 = myDriver.findElement(By.name("username"));
+		element7.click();
+		WebElement element8 = myDriver.findElement(By.name("username"));
+		element8.sendKeys("ifti");
+		WebElement element9 = myDriver.findElement(By.name("password"));
+		element9.click();
+		WebElement element10 = myDriver.findElement(By.name("password"));
+		element10.sendKeys("JAVA");
+		WebElement element11 = myDriver.findElement(By.name("FormsButton2"));
+		element11.click();
 	}
 	
 	
